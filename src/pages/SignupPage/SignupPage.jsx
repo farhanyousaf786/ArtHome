@@ -75,7 +75,7 @@ export default function SignUpPage(props) {
             href="/"
             className="large-font-size centered white-back login-title"
           >
-            Haiku For You
+            Art Home
           </a>
         </div>
         <br />
