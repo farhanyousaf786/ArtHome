@@ -26,7 +26,6 @@ function App() {
 
   if (user) {
     return (
-      <div id="background">
         <Routes>
           <Route
             path="/"
@@ -41,7 +40,6 @@ function App() {
             element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
           />
         </Routes>
-      </div>
     );
   }
 

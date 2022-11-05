@@ -3,6 +3,7 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 import userService from "../../utils/userService";
 import { useNavigate } from "react-router-dom";
+import "./SignupPage.css"
 
 function isPasswordMatch(passwordOne, passwordConf) {
   return passwordOne === passwordConf;
