@@ -26,6 +26,7 @@ function App() {
 
   if (user) {
     return (
+      <div id="all-routes">
         <Routes>
           <Route
             path="/"
@@ -40,6 +41,7 @@ function App() {
             element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
           />
         </Routes>
+      </div>
     );
   }
 
