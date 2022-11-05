@@ -1,0 +1,44 @@
+#landing-page {
+    background-color: #f4ebdb;
+  }
+  
+  #story {
+    background-color: rgb(253, 231, 204);
+    border: 2px solid #c2abaf;
+    height: 400px;
+    width: 80%;
+    border-radius: 25px;
+    text-align: left;
+  }
+  
+  #story-containor,
+  #reviews-containor {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #story-containor-buffer {
+    height: 70px;
+  }
+  
+  #home,
+  #design-details-buffer {
+    height: 70px;
+  }
+  
+  #footer-buffer {
+    height: 20vh;
+  }
+  
+  @media only screen and (max-width: 1050px) {
+    #story-containor-buffer {
+      height: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px) {
+    #story-containor-buffer {
+      height: 500px;
+    }
+  }
+  

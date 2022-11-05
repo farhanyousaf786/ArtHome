@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ loggedUser, handleLogout}) {
   return (
     <Navbar fixed="top" id="nav-bar" expand="lg">
       <Container>
