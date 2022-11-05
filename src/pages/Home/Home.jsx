@@ -9,7 +9,7 @@ import ReviewCard from "../../components/ReviewCard/ReviewCard";
 import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function Home({loggedUser, handleLogout}) {
   return (
