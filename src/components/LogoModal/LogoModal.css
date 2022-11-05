@@ -1,0 +1,17 @@
+#logo-container {
+  margin-top: 10vh;
+  height: 100px;
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icons:hover {
+  color: #c2abaf;
+}
+
+.icon-btn {
+  border: 0px;
+  background-color: rgb(253, 231, 204);
+}

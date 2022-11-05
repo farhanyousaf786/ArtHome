@@ -1,0 +1,16 @@
+#design-containor {
+  height: 40vh;
+  margin-top: 5%;
+}
+
+#design-card-containor {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 750px) {
+  #design-card-containor {
+    flex-direction: column;
+    align-items: center;
+  }
+}
