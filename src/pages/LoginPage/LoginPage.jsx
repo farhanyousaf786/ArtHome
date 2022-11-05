@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import userService from "../../utils/userService";
 import { useNavigate, Link } from "react-router-dom";
+import "./LoginPage.css"
 
 export default function LoginPage(props) {
   const [error, setError] = useState("");
@@ -33,7 +34,7 @@ export default function LoginPage(props) {
   }
 
   return (
-    <>
+    <div id="login-page">
       <div className="centered">
         <br />
         <a href="/" className="large-font-size centered white-back login-title">
@@ -73,6 +74,6 @@ export default function LoginPage(props) {
         New to us? <Link to="/signup">Sign Up</Link>
       </Link>
       {error ? <ErrorMessage error={error} /> : null}
-    </>
+    </div>
   );
 }
