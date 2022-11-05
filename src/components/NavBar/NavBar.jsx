@@ -25,7 +25,7 @@ function NavBar({ loggedUser, handleLogout }) {
             <Nav.Link href="#reviews-containor">Testimonials</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#reviews-containor">
+            <Nav.Link href="/login">
               <CgProfile size={36} className="icons" />
             </Nav.Link>
           </Nav>
