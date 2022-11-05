@@ -21,28 +21,36 @@ function App() {
   function handleLogout() {
     userService.logout();
     setUser(null);
-    navigate("/")
+    navigate("/");
   }
 
   if (user) {
     return (
-      <Routes>
-        <Route path="/" element={<Home loggedUser={user} handleLogout={handleLogout} />} />
-        <Route
-          path="/login"
-          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-        />
-      </Routes>
+      <div id="background">
+        <Routes>
+          <Route
+            path="/"
+            element={<Home loggedUser={user} handleLogout={handleLogout} />}
+          />
+          <Route
+            path="/login"
+            element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+          />
+          <Route
+            path="/signup"
+            element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+          />
+        </Routes>
+      </div>
     );
   }
 
   return (
     <Routes>
-      <Route path="/" element={<Home loggedUser={user} handleLogout={handleLogout} />} />
+      <Route
+        path="/"
+        element={<Home loggedUser={user} handleLogout={handleLogout} />}
+      />
       <Route
         path="/login"
         element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
