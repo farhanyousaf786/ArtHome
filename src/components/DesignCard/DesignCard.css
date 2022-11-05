@@ -1,0 +1,49 @@
+#design-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 350px;
+  width: 350px;
+}
+
+#design-img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+#image-overlay {
+  opacity: 0;
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  transition: 0.5s ease;
+  background-color: rgb(255, 255, 255);
+}
+
+#design-card:hover #image-overlay {
+  opacity: 0.5;
+}
+
+#text {
+  text-align: center;
+  padding-top: 50px;
+  color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 1050px) {
+  #design-card,
+  #image-overlay,
+  #design-img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #design-card,
+  #image-overlay,
+  #design-img {
+    margin-bottom: 15px;
+  }
+}

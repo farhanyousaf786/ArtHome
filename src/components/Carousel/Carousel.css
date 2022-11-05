@@ -1,0 +1,14 @@
+#carousel-container {
+  display: flex;
+  justify-content: center;
+}
+
+#carousel-settings {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.carousel-img {
+  object-fit: cover;
+  height: 40vh;
+}

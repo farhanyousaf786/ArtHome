@@ -1,0 +1,16 @@
+#profile-pic {
+  width: 250px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#profile-pic-container {
+  display: flex;
+  justify-content: left;
+}
+
+@media only screen and (max-width: 750px) {
+  #profile-pic {
+    width: 150px;
+  }
+}
