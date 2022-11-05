@@ -7,7 +7,7 @@ import "./NavBar.css";
 
 function NavBar({ loggedUser, handleLogout }) {
   return (
-    <Navbar fixed="top" id="nav-bar" expand="lg">
+    <Navbar fixed="top" id="nav-bar">
       <Container>
         <Navbar.Brand href="#home">
           <Image
@@ -25,9 +25,14 @@ function NavBar({ loggedUser, handleLogout }) {
             <Nav.Link href="#reviews-containor">Testimonials</Nav.Link>
           </Nav>
           <Nav>
+            {loggedUser ?  (
+            <Nav.Link onClick={handleLogout}>
+                <Image src={loggedUser?.photoUrl} alt="profile pic" className="profile-pic" roundedCircle />
+            </Nav.Link>
+            ) :
             <Nav.Link href="/login">
               <CgProfile size={36} className="icons" />
-            </Nav.Link>
+            </Nav.Link>}
           </Nav>
         </Navbar.Collapse>
       </Container>

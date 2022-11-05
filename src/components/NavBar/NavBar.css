@@ -1,11 +1,15 @@
 #nav-bar {
   margin-top: -20px;
-  width: 100%;
   z-index: 5;
   top: 70px;
   left: 0;
   background-color: rgb(253, 231, 204);
   border: 2px solid #c2abaf;
+  height: 80px;
+}
+
+.profile-pic {
+    height: 50px;
 }
 
 #logo-nav {
