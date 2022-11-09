@@ -6,9 +6,8 @@ function TopAlert() {
   return (
     <>
       <Alert id="alert-bar" key={"warning"} variant={"warning"}>
-        Find out your style TODAY!
+        Find out your style TODAY! &nbsp; &nbsp; &nbsp; 
         <button href="#" id="alert-btn">
-          {" "}
           Click Here for your FREE Style Quiz!
         </button>
       </Alert>
