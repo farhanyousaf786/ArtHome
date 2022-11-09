@@ -10,8 +10,10 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 
-
 function Home({loggedUser, handleLogout}) {
+
+
+  
   return (
     <div id="landing-page">
       <AlertBar />
