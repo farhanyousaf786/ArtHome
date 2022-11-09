@@ -26,7 +26,7 @@ function App() {
 
   if (user) {
     return (
-      <div className="all-routes">
+
         <Routes>
           <Route
             path="/"
@@ -41,12 +41,12 @@ function App() {
             element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
           />
         </Routes>
-      </div>
+
     );
   }
 
   return (
-    <div className="all-routes">
+
     <Routes>
       <Route
         path="/"
@@ -62,7 +62,7 @@ function App() {
       />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
-    </div>
+
   );
 }
 

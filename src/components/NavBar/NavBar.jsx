@@ -7,7 +7,7 @@ import "./NavBar.css";
 
 function NavBar({ loggedUser, handleLogout }) {
   return (
-    <Navbar fixed="top" id="nav-bar">
+    <Navbar id="nav-bar">
       <Container>
         <Navbar.Brand href="#home">
           <Image

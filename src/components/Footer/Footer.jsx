@@ -1,8 +1,10 @@
 import React from "react";
+import NavBar from "react-bootstrap/Navbar"
 import "./Footer.css";
 
 export default function Footer() {
   return (
+    <NavBar>
     <div id="footer-container">
       <img src="https://i.imgur.com/UicUhqA.png" alt="logo" id="footer-logo" />
       <div id="footer-text-container">
@@ -11,5 +13,6 @@ export default function Footer() {
       </div>
       <p>Copyright 2022</p>
     </div>
+    </NavBar>
   );
 }
