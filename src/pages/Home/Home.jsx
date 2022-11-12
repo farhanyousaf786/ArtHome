@@ -11,10 +11,13 @@ import Footer from "../../components/Footer/Footer";
 import "./Home.css";
 
 function Home({loggedUser, handleLogout}) {
+  const headerIntro = "Find out your style TODAY!";
+  const headerLinkDisp = "Click Here for your FREE Style Quiz!";
+  const headerLinkSrc = "/quiz";
   
   return (
     <div id="landing-page">
-      <AlertBar />
+      <AlertBar headerIntro={headerIntro} headerLinkDisp={headerLinkDisp} headerLinkSrc={headerLinkSrc} />
       <NavBar loggedUser={loggedUser} handleLogout={handleLogout} />
       <div id="home"></div>
       <Carousel />
