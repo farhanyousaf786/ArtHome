@@ -9,7 +9,7 @@ function NavBar({ loggedUser, handleLogout }) {
   return (
     <Navbar fixed="top" id="nav-bar">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <Image
             id="logo-nav"
             src="https://i.imgur.com/G4eja1w.png"
