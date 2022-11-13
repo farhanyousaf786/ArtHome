@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import NavBar from "../../components/NavBar/NavBar";
-
+import { useNavigate, Link } from "react-router-dom";
 import userService from "../../utils/userService";
-import { useNavigate } from "react-router-dom";
 import "./SignupPage.css";
 
 function isPasswordMatch(passwordOne, passwordConf) {
@@ -12,6 +11,7 @@ function isPasswordMatch(passwordOne, passwordConf) {
 }
 
 export default function SignUpPage(props) {
+  const funFacts =["Carpet does not belong in the bathroom. Please pass it on."]
   const [error, setError] = useState({
     message: "",
     passwordError: false,
@@ -71,7 +71,7 @@ export default function SignUpPage(props) {
 
   return (
     <div id="signup-page">
-      <AlertBar />
+      <AlertBar headerIntro={funFacts[0]}/>
       <NavBar />
       <div className="login-separate"></div>
       <div className="segment-container">
@@ -145,9 +145,11 @@ export default function SignUpPage(props) {
               Signup
             </button>
             <br />
-
-            {error.message ? <ErrorMessage error={error.message} /> : null}
             <br />
+            <p className="segment-footer">
+            Already signed up? <Link to="/login">Log In</Link>
+            </p>
+            {error.message ? <ErrorMessage error={error.message} /> : null}
           </form>
         </div>
       </div>

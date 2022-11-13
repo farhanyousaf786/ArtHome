@@ -51,9 +51,10 @@
 
 .sub-header {
   font-size: 16pt;
+  padding-top: 20px;
 }
 
-#new-to-us {
+.segment-footer {
   border-top: 2px solid #c2abaf;
   padding-top: 10px;
 }

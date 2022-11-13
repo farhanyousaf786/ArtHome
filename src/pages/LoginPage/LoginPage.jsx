@@ -74,8 +74,7 @@ export default function LoginPage(props) {
             </button>
           </form>
           <br />
-          <br />
-          <p id="new-to-us">
+          <p className="segment-footer">
             New to us? <Link to="/signup">Sign Up</Link>
           </p>
           {error ? <ErrorMessage error={error} /> : null}
