@@ -44,6 +44,7 @@ function App() {
             path="/quiz"
             element={<Quiz loggedUser={user} handleLogout={handleLogout} />}
           />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
     );
   }

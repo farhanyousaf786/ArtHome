@@ -19,7 +19,6 @@ function Home({loggedUser, handleLogout}) {
     <div id="landing-page">
       <AlertBar headerIntro={headerIntro} headerLinkDisp={headerLinkDisp} headerLinkSrc={headerLinkSrc} />
       <NavBar loggedUser={loggedUser} handleLogout={handleLogout} />
-      <div id="home"></div>
       <Carousel />
       <div id="logo-details"></div>
       <LogoModal />
