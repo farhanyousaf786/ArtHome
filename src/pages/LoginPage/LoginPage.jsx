@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Footer from "../../components/Footer/Footer";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import NavBar from "../../components/NavBar/NavBar";
@@ -50,7 +49,7 @@ export default function LoginPage(props) {
             <input
               type="email"
               name="email"
-              placeholder="email"
+              placeholder="Email"
               value={state.email}
               onChange={handleChange}
               required
@@ -59,7 +58,7 @@ export default function LoginPage(props) {
             <input
               name="password"
               type="password"
-              placeholder="password"
+              placeholder="Password"
               value={state.password}
               onChange={handleChange}
               required
@@ -80,8 +79,6 @@ export default function LoginPage(props) {
           {error ? <ErrorMessage error={error} /> : null}
         </div>
       </div>
-      <div className="login-separate"></div>
-      <Footer />
     </div>
   );
 }
