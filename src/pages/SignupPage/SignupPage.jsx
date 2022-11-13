@@ -72,7 +72,7 @@ export default function SignUpPage(props) {
   return (
     <div id="signup-page">
       <AlertBar headerIntro={funFacts[0]}/>
-      <NavBar />
+      <NavBar dispSubs={false}/>
       <div className="login-separate"></div>
       <div className="segment-container">
         <div className="segment">

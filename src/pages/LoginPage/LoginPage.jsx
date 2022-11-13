@@ -39,7 +39,7 @@ export default function LoginPage(props) {
   return (
     <div id="login-page">
       <AlertBar headerIntro={funFacts[0]}/>
-      <NavBar />
+      <NavBar dispSubs={false}/>
       <div className="login-separate"></div>
       <div className="segment-container">
         <div className="segment">

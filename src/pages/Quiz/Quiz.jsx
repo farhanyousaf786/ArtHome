@@ -11,7 +11,7 @@ export default function Quiz({loggedUser, handleLogout}) {
     return(
         <div>
             <AlertBar headerIntro={headerIntro} headerLinkDisp={headerLinkDisp} headerLinkSrc={headerLinkSrc} />
-            <NavBar loggedUser={loggedUser} handleLogout={handleLogout} />
+            <NavBar loggedUser={loggedUser} handleLogout={handleLogout} dispSubs={false} />
             <h1 id="test">STYLE QUIZ</h1>
         </div>
     )
