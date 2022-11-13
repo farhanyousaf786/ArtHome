@@ -16,10 +16,28 @@
   width: 250px;
 }
 
+.login-btn {
+  background-color: #c2abaf;
+  border: 2px solid rgb(253, 231, 204);
+  border-radius: 5px;
+  color:#fde7cc;
+  padding: 10px;
+  font-size: 14pt;
+}
+
+.login-btn:hover {
+  transform: translateY(-5px);
+}
+
+.login-btn:active {
+  transform: translateY(0px);
+}
+
 .segment {
   background-color: rgb(253, 231, 204);
   border: 2px solid #c2abaf;
-  width: 60vw;
+  width: 40vw;
+  text-align: center;
 }
 
 .segment-container {
@@ -28,5 +46,14 @@
 }
 
 .login-separate {
-  height: 34vh;
+  height: 30vh;
+}
+
+.sub-header {
+  font-size: 16pt;
+}
+
+#new-to-us {
+  border-top: 2px solid #c2abaf;
+  padding-top: 10px;
 }
