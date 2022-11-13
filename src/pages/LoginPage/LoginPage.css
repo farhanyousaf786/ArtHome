@@ -57,3 +57,9 @@
   border-top: 2px solid #c2abaf;
   padding-top: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .segment {
+    width: 80vw;
+  }
+}
