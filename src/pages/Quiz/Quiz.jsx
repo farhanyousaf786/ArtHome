@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
-import Carousel from "../../components/Carousel/Carousel";
 import "./Quiz.css";
 
 export default function Quiz({loggedUser, handleLogout}) {
@@ -13,7 +12,7 @@ export default function Quiz({loggedUser, handleLogout}) {
         <div>
             <AlertBar headerIntro={headerIntro} headerLinkDisp={headerLinkDisp} headerLinkSrc={headerLinkSrc} />
             <NavBar loggedUser={loggedUser} handleLogout={handleLogout} />
-            <Carousel />
+            <h1 id="test">STYLE QUIZ</h1>
         </div>
     )
 }
