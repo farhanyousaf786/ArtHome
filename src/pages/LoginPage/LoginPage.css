@@ -1,5 +1,32 @@
 #login-page {
-    background-color: #f4ebdb;
-    height: 100vh;
-    width: 100vw;
-  }
+  background-color: #f4ebdb;
+  height: 100vh;
+  width: 100vw;
+}
+
+#logo-login-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  height: 80px;
+}
+
+#logo-login {
+  width: 250px;
+}
+
+.segment {
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  width: 60vw;
+}
+
+.segment-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-separate {
+  height: 34vh;
+}

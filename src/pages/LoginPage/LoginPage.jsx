@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Footer from "../../components/Footer/Footer";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import NavBar from "../../components/NavBar/NavBar";
 import userService from "../../utils/userService";
 import { useNavigate, Link } from "react-router-dom";
-import "./LoginPage.css"
+import "./LoginPage.css";
 
 export default function LoginPage(props) {
   const [error, setError] = useState("");
@@ -35,45 +37,51 @@ export default function LoginPage(props) {
 
   return (
     <div id="login-page">
-      <div className="centered">
-        <br />
-        <a href="/" className="large-font-size centered white-back login-title">
-          ART HOME
-        </a>
+      <NavBar />
+      <div className="login-separate"></div>
+      <div className="segment-container">
+        <div className="segment">
+          <p>Log in to your account</p>
+
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={state.email}
+              onChange={handleChange}
+              required
+            />
+            <br />
+            <input
+              name="password"
+              type="password"
+              placeholder="password"
+              value={state.password}
+              onChange={handleChange}
+              required
+            />
+            <br />
+            <button
+              color="grey"
+              fluid
+              size="large"
+              type="submit"
+              className="btn"
+            >
+              Login
+            </button>
+          </form>
+          <br />
+
+          <Link to="/signup">
+            New to us? <Link to="/signup">Sign Up</Link>
+          </Link>
+          {error ? <ErrorMessage error={error} /> : null}
+        </div>
       </div>
-      <br />
-      <br />
-
-      <p color="grey" textAlign="center">
-        Log in to your account
-      </p>
-
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="email"
-          value={state.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="password"
-          value={state.password}
-          onChange={handleChange}
-          required
-        />
-        <button color="grey" fluid size="large" type="submit" className="btn">
-          Login
-        </button>
-      </form>
-
-      <Link to="/signup">
-        New to us? <Link to="/signup">Sign Up</Link>
-      </Link>
-      {error ? <ErrorMessage error={error} /> : null}
+      <div className="login-separate"></div>
+      <Footer />
     </div>
   );
 }
