@@ -17,26 +17,32 @@ function NavBar({ loggedUser, handleLogout, dispSubs }) {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          { dispSubs ? (
-          <Nav className="me-auto">
-            <Nav.Link href="#logo-details">Specialities</Nav.Link>
-            <Nav.Link href="#design-details-buffer">Styles</Nav.Link>
-            <Nav.Link href="#story-containor-buffer">Story</Nav.Link>
-            <Nav.Link href="#reviews-containor">Testimonials</Nav.Link>
-          </Nav>
-          ) : null }
-        </Navbar.Collapse>
+        {dispSubs ? (
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#logo-details">Specialities</Nav.Link>
+              <Nav.Link href="#design-details-buffer">Styles</Nav.Link>
+              <Nav.Link href="#story-containor-buffer">Story</Nav.Link>
+              <Nav.Link href="#reviews-containor">Testimonials</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        ) : null}
         <Nav className="justify-content-end">
-            {loggedUser ?  (
+          {loggedUser ? (
             <Nav.Link onClick={handleLogout}>
-                <Image src={loggedUser?.photoUrl} alt="profile pic" className="profile-pic" roundedCircle />
+              <Image
+                src={loggedUser?.photoUrl}
+                alt="profile pic"
+                className="profile-pic"
+                roundedCircle
+              />
             </Nav.Link>
-            ) :
+          ) : (
             <Nav.Link href="/login">
               <CgProfile size={36} className="icons" />
-            </Nav.Link>}
-          </Nav>
+            </Nav.Link>
+          )}
+        </Nav>
       </Container>
     </Navbar>
   );
