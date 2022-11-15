@@ -135,7 +135,8 @@ export default function Quiz({ loggedUser, handleLogout }) {
         dispSubs={false}
       />
       <div id="quiz-buffer"></div>
-      <div className="app">
+      <div id="quiz-container">
+      <div className="quiz">
         {showScore ? (
           <div className="score-section">
             You Finished!
@@ -152,7 +153,7 @@ export default function Quiz({ loggedUser, handleLogout }) {
             </div>
             <div className="answer-section">
               {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <button
+                <button id="quiz-btn"
                   onClick={() =>
                     handleAnswerOptionClick(answerOption.isLetter)
                   }
@@ -164,6 +165,7 @@ export default function Quiz({ loggedUser, handleLogout }) {
           </>
         )}
       </div>
+    </div>
     </div>
   );
 }
