@@ -75,13 +75,25 @@ export default function Quiz({ loggedUser, handleLogout }) {
     {
         questionText: "Which of these light fixtures do you like the best?",
         answerOptions: [
-          { answerText: "Pina Colada", isLetter: "A" },
-          { answerText: "Vodka Soda", isLetter: "B" },
-          { answerText: "Bordeaux", isLetter: "C" },
-          { answerText: "Long Island Ice Tea", isLetter: "D" },
-          { answerText: "Beer", isLetter: "E" },
-          { answerText: "Whatever's on special", isLetter: "F" },
-          { answerText: "Water", isLetter: "G" },
+          { answerText: "Capiz shell chandelier", isLetter: "A" },
+          { answerText: "Oversize brass pendants", isLetter: "B" },
+          { answerText: "Wrought iron and crystal chandelier", isLetter: "C" },
+          { answerText: "Wrought iron wall scones", isLetter: "D" },
+          { answerText: "Moroccan style lanterns", isLetter: "E" },
+          { answerText: "Mason jar pendants", isLetter: "F" },
+          { answerText: "Antler chandelier", isLetter: "G" },
+        ],
+      },
+      {
+        questionText: "Which of these accessories would you buy at a yard sale?",
+        answerOptions: [
+          { answerText: "A collection of sea shells", isLetter: "A" },
+          { answerText: "A vase of tulips", isLetter: "B" },
+          { answerText: "An empty bird cage", isLetter: "C" },
+          { answerText: "A collection of wine glasses", isLetter: "D" },
+          { answerText: "A collection of colored glass", isLetter: "E" },
+          { answerText: "Wire baskets", isLetter: "F" },
+          { answerText: "Cow skull to hang on the wall", isLetter: "G" },
         ],
       },
   ];
