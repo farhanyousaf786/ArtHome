@@ -119,6 +119,15 @@ export default function SignUpPage(props) {
               onChange={handleChange}
               required
             />
+            <br />
+            <br />
+            <textarea
+              label="bio"
+              name="bio"
+              placeholder="Tell us more about yourself..."
+              value={state.bio}
+              onChange={handleChange}
+            />
             </div>
             <br />
 
