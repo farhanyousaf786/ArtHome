@@ -190,7 +190,6 @@ export default function Quiz({ loggedUser, handleLogout }) {
         handleLogout={handleLogout}
         dispSubs={false}
       />
-      <div id="quiz-buffer"></div>
       <div id="quiz-container">
         <div className="quiz">
           {showScore ? (

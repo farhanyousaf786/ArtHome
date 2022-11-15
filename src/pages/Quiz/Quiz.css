@@ -1,6 +1,4 @@
-#quiz-buffer {
-  margin-top: 200px;
-}
+
 
 #quiz-landing-page {
   min-height: 100vh;
@@ -8,11 +6,13 @@
 }
 
 #quiz-container {
+    margin-top: 200px;
     display: flex;
     justify-content: center;
 }
 
 .quiz {
+    align-items: center;
   background-color: rgb(253, 231, 204);
   width: 60vw;
   min-height: 200px;
@@ -85,9 +85,10 @@
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
     .quiz{
         width: 90vw;
         flex-direction: column;
     }
+
   }
