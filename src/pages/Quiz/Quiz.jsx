@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import "./Quiz.css";
 
+let userStyle = "";
 const userAnswers = [];
 const questions = [
     {
@@ -152,8 +153,22 @@ export default function Quiz({ loggedUser, handleLogout }) {
     answersTallied.sort(compare);
     console.log(answersTallied)
 
+    if (answersTallied[0].type === "A"){
+        userStyle = "Coastal Chic will make you feel right at home."
+    } else if (answersTallied[0].type === "B"){
+        userStyle = "Scandinavian may just be the perfect style for you."
+    } else if (answersTallied[0].type === "C"){
+        userStyle = "French Country is a great choice."
+    } else if (answersTallied[0].type === "D"){
+        userStyle = "Tuscan furnishings should definitely be included in your home."
+    } else if (answersTallied[0].type === "E"){
+        userStyle = "Bohemian is your preferred style."
+    } else if (answersTallied[0].type === "F"){
+        userStyle = "Farmhouse is likely a good fit."
+    } else {
+        userStyle = "Western will work well in your home."
+    }
 
-    
     setShowScore(true);
   };
 
@@ -179,7 +194,7 @@ export default function Quiz({ loggedUser, handleLogout }) {
       <div id="quiz-container">
         <div className="quiz">
           {showScore ? (
-            <div className="score-section">You Finished!</div>
+            <div className="score-section">{userStyle}</div>
           ) : (
             <>
               <div className="question-section">
