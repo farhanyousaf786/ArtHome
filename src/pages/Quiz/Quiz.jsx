@@ -3,12 +3,8 @@ import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import "./Quiz.css";
 
-export default function Quiz({ loggedUser, handleLogout }) {
-  const headerIntro = "Already know what you want?";
-  const headerLinkDisp = "Click Here to schedule a FREE phone consultation!";
-  const headerLinkSrc = "/";
-
-  const questions = [
+const userAnswers = [];
+const questions = [
     {
       questionText: "Where would you most like to live?",
       answerOptions: [
@@ -98,11 +94,14 @@ export default function Quiz({ loggedUser, handleLogout }) {
       ],
     },
   ];
-  const userAnswers = [];
+
+export default function Quiz({ loggedUser, handleLogout }) {
+  const headerIntro = "Already know what you want?";
+  const headerLinkDisp = "Click Here to schedule a FREE phone consultation!";
+  const headerLinkSrc = "/";
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  
-
 
   const handleAnswerOptionClick = (isLetter) => {
     userAnswers.push(isLetter);
@@ -111,16 +110,58 @@ export default function Quiz({ loggedUser, handleLogout }) {
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
-      setShowScore(true);
       handleGrade();
     }
   };
 
   const handleGrade = () => {
+    let A = 0;
+    let B = 0;
+    let C = 0;
+    let D = 0;
+    let E = 0;
+    let F = 0;
+    let G = 0;
+
+    userAnswers.forEach((answer) => {
+      answer === "A"
+        ? A++
+        : answer === "B"
+        ? B++
+        : answer === "C"
+        ? C++
+        : answer === "D"
+        ? D++
+        : answer === "E"
+        ? E++
+        : answer === "F"
+        ? F++
+        : G++;
+    });
+
+    const answersTallied = [
+        { type: "A", value: A },
+        { type: "B", value: B },
+        { type: "C", value: C },
+        { type: "D", value: D },
+        { type: "E", value: E },
+        { type: "F", value: F },
+        { type: "G", value: G },
+    ]
+
+    answersTallied.sort(compare);
+    console.log(answersTallied)
 
 
-  }
-  
+    
+    setShowScore(true);
+  };
+
+  const compare = (x,y) => {
+    if (x.value < y.value) return 1;
+    if (x.value > y.value) return -1;
+    return 0;
+}
 
   return (
     <div id="quiz-landing-page">
@@ -136,36 +177,37 @@ export default function Quiz({ loggedUser, handleLogout }) {
       />
       <div id="quiz-buffer"></div>
       <div id="quiz-container">
-      <div className="quiz">
-        {showScore ? (
-          <div className="score-section">
-            You Finished!
-          </div>
-        ) : (
-          <>
-            <div className="question-section">
-              <div className="question-count">
-                <span>Question {currentQuestion + 1}</span>/{questions.length}
+        <div className="quiz">
+          {showScore ? (
+            <div className="score-section">You Finished!</div>
+          ) : (
+            <>
+              <div className="question-section">
+                <div className="question-count">
+                  <span>Question {currentQuestion + 1}</span>/{questions.length}
+                </div>
+                <div className="question-text">
+                  {questions[currentQuestion].questionText}
+                </div>
               </div>
-              <div className="question-text">
-                {questions[currentQuestion].questionText}
+              <div className="answer-section">
+                {questions[currentQuestion].answerOptions.map(
+                  (answerOption) => (
+                    <button
+                      id="quiz-btn"
+                      onClick={() =>
+                        handleAnswerOptionClick(answerOption.isLetter)
+                      }
+                    >
+                      {answerOption.answerText}
+                    </button>
+                  )
+                )}
               </div>
-            </div>
-            <div className="answer-section">
-              {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <button id="quiz-btn"
-                  onClick={() =>
-                    handleAnswerOptionClick(answerOption.isLetter)
-                  }
-                >
-                  {answerOption.answerText}
-                </button>
-              ))}
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
-    </div>
     </div>
   );
 }
