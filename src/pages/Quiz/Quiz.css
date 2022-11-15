@@ -3,3 +3,8 @@
     text-align: center;
     background-color: #f4ebdb;
 }
+
+#quiz-landing-page {
+    min-height: 100vh;
+    background-color: #f4ebdb;
+}
