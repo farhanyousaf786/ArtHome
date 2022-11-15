@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import "./Quiz.css";
@@ -61,7 +61,8 @@ export default function Quiz({ loggedUser, handleLogout }) {
       ],
     },
     {
-      questionText: "Which of these drinks are you likely to order at happy hour?",
+      questionText:
+        "Which of these drinks are you likely to order at happy hour?",
       answerOptions: [
         { answerText: "Pina Colada", isLetter: "A" },
         { answerText: "Vodka Soda", isLetter: "B" },
@@ -73,30 +74,53 @@ export default function Quiz({ loggedUser, handleLogout }) {
       ],
     },
     {
-        questionText: "Which of these light fixtures do you like the best?",
-        answerOptions: [
-          { answerText: "Capiz shell chandelier", isLetter: "A" },
-          { answerText: "Oversize brass pendants", isLetter: "B" },
-          { answerText: "Wrought iron and crystal chandelier", isLetter: "C" },
-          { answerText: "Wrought iron wall scones", isLetter: "D" },
-          { answerText: "Moroccan style lanterns", isLetter: "E" },
-          { answerText: "Mason jar pendants", isLetter: "F" },
-          { answerText: "Antler chandelier", isLetter: "G" },
-        ],
-      },
-      {
-        questionText: "Which of these accessories would you buy at a yard sale?",
-        answerOptions: [
-          { answerText: "A collection of sea shells", isLetter: "A" },
-          { answerText: "A vase of tulips", isLetter: "B" },
-          { answerText: "An empty bird cage", isLetter: "C" },
-          { answerText: "A collection of wine glasses", isLetter: "D" },
-          { answerText: "A collection of colored glass", isLetter: "E" },
-          { answerText: "Wire baskets", isLetter: "F" },
-          { answerText: "Cow skull to hang on the wall", isLetter: "G" },
-        ],
-      },
+      questionText: "Which of these light fixtures do you like the best?",
+      answerOptions: [
+        { answerText: "Capiz shell chandelier", isLetter: "A" },
+        { answerText: "Oversize brass pendants", isLetter: "B" },
+        { answerText: "Wrought iron and crystal chandelier", isLetter: "C" },
+        { answerText: "Wrought iron wall scones", isLetter: "D" },
+        { answerText: "Moroccan style lanterns", isLetter: "E" },
+        { answerText: "Mason jar pendants", isLetter: "F" },
+        { answerText: "Antler chandelier", isLetter: "G" },
+      ],
+    },
+    {
+      questionText: "Which of these accessories would you buy at a yard sale?",
+      answerOptions: [
+        { answerText: "A collection of sea shells", isLetter: "A" },
+        { answerText: "A vase of tulips", isLetter: "B" },
+        { answerText: "An empty bird cage", isLetter: "C" },
+        { answerText: "A collection of wine glasses", isLetter: "D" },
+        { answerText: "A collection of colored glass", isLetter: "E" },
+        { answerText: "Wire baskets", isLetter: "F" },
+        { answerText: "Cow skull to hang on the wall", isLetter: "G" },
+      ],
+    },
   ];
+  const userAnswers = [];
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  
+
+
+  const handleAnswerOptionClick = (isLetter) => {
+    userAnswers.push(isLetter);
+
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+      handleGrade();
+    }
+  };
+
+  const handleGrade = () => {
+
+
+  }
+  
 
   return (
     <div id="quiz-landing-page">
@@ -110,7 +134,36 @@ export default function Quiz({ loggedUser, handleLogout }) {
         handleLogout={handleLogout}
         dispSubs={false}
       />
-      <h1 id="test">STYLE QUIZ</h1>
+      <div id="quiz-buffer"></div>
+      <div className="app">
+        {showScore ? (
+          <div className="score-section">
+            You Finished!
+          </div>
+        ) : (
+          <>
+            <div className="question-section">
+              <div className="question-count">
+                <span>Question {currentQuestion + 1}</span>/{questions.length}
+              </div>
+              <div className="question-text">
+                {questions[currentQuestion].questionText}
+              </div>
+            </div>
+            <div className="answer-section">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <button
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isLetter)
+                  }
+                >
+                  {answerOption.answerText}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }
