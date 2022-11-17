@@ -11,7 +11,7 @@ export default function Footer() {
         <p>Privacy Policy</p>
         <p>Careers</p>
       </div>
-      <p>Copyright 2022</p>
+      <p>Copyright {new Date().getFullYear()} </p>
     </div>
     </NavBar>
   );
