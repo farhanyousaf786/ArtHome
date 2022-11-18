@@ -51,28 +51,81 @@ const questions = [
   {
     questionText: "Which of these patterns makes your heart sing?",
     answerOptions: [
-      { answerText: "Nautical", isLetter: "A", imgSrc:'https://i.imgur.com/CyYcIig.png' },
-      { answerText: "Black and White Stripes", isLetter: "B", imgSrc:'https://i.imgur.com/xabeF7r.jpg' },
-      { answerText: "Pastoral Toile", isLetter: "C", imgSrc:'https://i.imgur.com/W8Cixd3.png' },
-      { answerText: "Paisley", isLetter: "D", imgSrc:'https://i.imgur.com/l77hgvh.png' },
-      { answerText: "I can't choose - I love all patterns!", isLetter: "E", imgSrc:'https://i.imgur.com/Ozi13CM.png' },
-      { answerText: "Checkered", isLetter: "F", imgSrc:'https://i.imgur.com/QQh9Awq.jpg' },
-      { answerText: "Plaid", isLetter: "G", imgSrc:'https://i.imgur.com/asVzWnH.jpg' },
+      {
+        answerText: "Nautical",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/CyYcIig.png",
+      },
+      {
+        answerText: "Black and White Stripes",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/xabeF7r.jpg",
+      },
+      {
+        answerText: "Pastoral Toile",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/W8Cixd3.png",
+      },
+      {
+        answerText: "Paisley",
+        isLetter: "D",
+        imgSrc: "https://i.imgur.com/l77hgvh.png",
+      },
+      {
+        answerText: "I can't choose - I love all patterns!",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/Ozi13CM.png",
+      },
+      {
+        answerText: "Checkered",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/QQh9Awq.jpg",
+      },
+      {
+        answerText: "Plaid",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/asVzWnH.jpg",
+      },
     ],
   },
   {
     questionText: "Which of these colors have staying power?",
     answerOptions: [
-      { answerText: "Blue, White, Cream, & Beige", isLetter: "A" },
-      { answerText: "White, Grey, Black, & Red", isLetter: "B" },
-      { answerText: "Blue, Red, Yellow, & Lavender", isLetter: "C" },
+      {
+        answerText: "Blue, White, Cream, & Beige",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/W4khKnR.png",
+      },
+      {
+        answerText: "White, Grey, Black, & Red",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/WSZTvO5.png",
+      },
+      {
+        answerText: "Blue, Red, Yellow, & Lavender",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/vdu3MPB.png",
+      },
       {
         answerText: "Terracotta, Burgundy, Burnt Orange, & Olive Green",
         isLetter: "D",
+        imgSrc: "https://i.imgur.com/yVpQRD8.png",
       },
-      { answerText: "Red, Purple, Pink, & Blue", isLetter: "E" },
-      { answerText: "White, Beige, Brown, & Yellow", isLetter: "F" },
-      { answerText: "Brown, Beige, Deep Red, & Turuoise", isLetter: "G" },
+      {
+        answerText: "Red, Purple, Pink, & Blue",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/mAbRzwa.png",
+      },
+      {
+        answerText: "White, Beige, Brown, & Yellow",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/MQfmqW6.png",
+      },
+      {
+        answerText: "Brown, Beige, Deep Red, & Turuoise",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/jDR3X9U.png",
+      },
     ],
   },
   {
@@ -248,7 +301,7 @@ export default function Quiz({ loggedUser, handleLogout }) {
                         }
                       >
                         <Card.Img
-                          as={ Image }
+                          as={Image}
                           fluid={true}
                           id="btn-img"
                           src={answerOption.imgSrc}
