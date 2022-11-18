@@ -131,13 +131,41 @@ const questions = [
   {
     questionText: "Which of these items would you love to hang on your wall?",
     answerOptions: [
-      { answerText: "A set of sea coral pictures", isLetter: "A" },
-      { answerText: "Brightly colored prints", isLetter: "B" },
-      { answerText: "A collection of folk animal art", isLetter: "C" },
-      { answerText: "A medieval tapestry", isLetter: "D" },
-      { answerText: "1970's rock band posters", isLetter: "E" },
-      { answerText: "A painting of an old barn", isLetter: "F" },
-      { answerText: "A classic western painting", isLetter: "G" },
+      {
+        answerText: "A set of sea coral pictures",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/KpolEdw.jpg",
+      },
+      {
+        answerText: "Brightly colored prints",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/j9y2RYA.png",
+      },
+      {
+        answerText: "A collection of folk animal art",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/7WuGlin.png",
+      },
+      {
+        answerText: "A medieval tapestry",
+        isLetter: "D",
+        imgSrc: "https://i.imgur.com/BFVSqHB.png",
+      },
+      {
+        answerText: "1970's rock band posters",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/hycbPDP.png",
+      },
+      {
+        answerText: "A painting of an old barn",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/2bWUMtU.png",
+      },
+      {
+        answerText: "A classic western painting",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/OUGipQz.png",
+      },
     ],
   },
   {
