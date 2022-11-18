@@ -51,13 +51,13 @@ const questions = [
   {
     questionText: "Which of these patterns makes your heart sing?",
     answerOptions: [
-      { answerText: "Nautical", isLetter: "A" },
-      { answerText: "Black and White Stripes", isLetter: "B" },
-      { answerText: "Pastoral Toile", isLetter: "C" },
-      { answerText: "Paisley", isLetter: "D" },
-      { answerText: "I can't choose - I love all patterns!", isLetter: "E" },
-      { answerText: "Checkered", isLetter: "F" },
-      { answerText: "Plaid", isLetter: "G" },
+      { answerText: "Nautical", isLetter: "A", imgSrc:'https://i.imgur.com/CyYcIig.png' },
+      { answerText: "Black and White Stripes", isLetter: "B", imgSrc:'https://i.imgur.com/xabeF7r.jpg' },
+      { answerText: "Pastoral Toile", isLetter: "C", imgSrc:'https://i.imgur.com/W8Cixd3.png' },
+      { answerText: "Paisley", isLetter: "D", imgSrc:'https://i.imgur.com/l77hgvh.png' },
+      { answerText: "I can't choose - I love all patterns!", isLetter: "E", imgSrc:'https://i.imgur.com/Ozi13CM.png' },
+      { answerText: "Checkered", isLetter: "F", imgSrc:'https://i.imgur.com/QQh9Awq.jpg' },
+      { answerText: "Plaid", isLetter: "G", imgSrc:'https://i.imgur.com/asVzWnH.jpg' },
     ],
   },
   {
