@@ -6,7 +6,7 @@
 }
 
 #quiz-container {
-    margin-top: 200px;
+    margin: 200px 0;
     display: flex;
     justify-content: center;
 }
@@ -14,7 +14,7 @@
 .quiz {
   align-items: center;
   background-color: rgb(253, 231, 204);
-  width: 80vw;
+  width: 90vw;
   min-height: 200px;
   height: min-content;
   border-radius: 15px;
