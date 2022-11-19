@@ -27,8 +27,8 @@
     height: 70px;
   }
   
-  #footer-buffer {
-    height: 20vh;
+  #footer-buffer, #header-buffer {
+    height: 10vh;
   }
   
   @media only screen and (max-width: 1050px) {

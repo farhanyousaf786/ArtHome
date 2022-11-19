@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import { Image, Card, Row } from "react-bootstrap";
+//import Loading from "../../components/Loading/Loading";
 
 import "./Quiz.css";
 
@@ -211,16 +212,16 @@ export default function Quiz({ loggedUser, handleLogout }) {
   const headerIntro = "Already know what you want?";
   const headerLinkDisp = "Click Here to schedule a FREE phone consultation!";
   const headerLinkSrc = "/";
-
+  //const [loading, setLoading] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
-
   const handleAnswerOptionClick = (isLetter) => {
     userAnswers.push(isLetter);
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
+      //setLoading(false);
     } else {
       handleGrade();
     }
@@ -262,7 +263,6 @@ export default function Quiz({ loggedUser, handleLogout }) {
     ];
 
     answersTallied.sort(compare);
-    console.log(answersTallied);
 
     if (answersTallied[0].type === "A") {
       userStyle = "Coastal Chic will make you feel right at home.";
@@ -322,12 +322,14 @@ export default function Quiz({ loggedUser, handleLogout }) {
                   {questions[currentQuestion].answerOptions.map(
                     (answerOption) => (
                       <Card
-                        className="text-white"
                         id="quiz-btn"
                         onClick={() =>
                           handleAnswerOptionClick(answerOption.isLetter)
                         }
                       >
+                        <Card.Body>
+                          <Card.Title>{answerOption.answerText}</Card.Title>
+                        </Card.Body>
                         <Card.Img
                           as={Image}
                           fluid={true}
@@ -335,9 +337,6 @@ export default function Quiz({ loggedUser, handleLogout }) {
                           src={answerOption.imgSrc}
                           alt={answerOption.answerText}
                         />
-                        <Card.ImgOverlay>
-                          <Card.Title>{answerOption.answerText}</Card.Title>
-                        </Card.ImgOverlay>
                       </Card>
                     )
                   )}
