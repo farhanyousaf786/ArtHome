@@ -173,13 +173,41 @@ const questions = [
     questionText:
       "Which of these drinks are you likely to order at happy hour?",
     answerOptions: [
-      { answerText: "Pina Colada", isLetter: "A" },
-      { answerText: "Vodka Soda", isLetter: "B" },
-      { answerText: "Bordeaux", isLetter: "C" },
-      { answerText: "Long Island Ice Tea", isLetter: "D" },
-      { answerText: "Beer", isLetter: "E" },
-      { answerText: "Whatever's on special", isLetter: "F" },
-      { answerText: "Water", isLetter: "G" },
+      {
+        answerText: "Pina Colada",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/TNEZKgT.jpg",
+      },
+      {
+        answerText: "Vodka Soda",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/UoGhQDD.jpg",
+      },
+      {
+        answerText: "Bordeaux",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/hYJWh2R.jpg",
+      },
+      {
+        answerText: "Long Island Ice Tea",
+        isLetter: "D",
+        imgSrc: "https://i.imgur.com/5FI6nYD.jpg",
+      },
+      {
+        answerText: "Beer",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/gfYYmbz.jpg",
+      },
+      {
+        answerText: "Whatever's on special",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/Ya4xWzq.jpg",
+      },
+      {
+        answerText: "Water",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/Xl8DeIE.jpg",
+      },
     ],
   },
   {
