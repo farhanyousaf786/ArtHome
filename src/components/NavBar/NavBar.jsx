@@ -5,7 +5,10 @@ import Image from "react-bootstrap/Image";
 import { CgProfile } from "react-icons/cg";
 import "./NavBar.css";
 
-function NavBar({ loggedUser, handleLogout, dispSubs }) {
+
+
+function NavBar({ loggedUser, handleLogout, dispSubs, handleAvatarClick, avatarDisp }) {
+  console.log(avatarDisp, "<--")
   return (
     <Navbar fixed="top" id="nav-bar" expand="md">
       <Container>
@@ -29,7 +32,7 @@ function NavBar({ loggedUser, handleLogout, dispSubs }) {
         </Navbar.Collapse>
         <Nav className="justify-content-end">
             {loggedUser ?  (
-            <Nav.Link onClick={handleLogout}>
+            <Nav.Link onClick={handleAvatarClick}>
                 <Image src={loggedUser?.photoUrl} alt="profile pic" className="profile-pic" roundedCircle />
             </Nav.Link>
             ) :
@@ -38,6 +41,11 @@ function NavBar({ loggedUser, handleLogout, dispSubs }) {
             </Nav.Link>}
           </Nav>
       </Container>
+      {avatarDisp ? (
+                <div id="avatar-menu">
+                  <p>It works!</p>
+                </div>
+                ) : null}
     </Navbar>
   );
 }

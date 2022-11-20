@@ -16,6 +16,14 @@
   width: 150px;
 }
 
+#avatar-menu {
+  background-color: rgb(253, 231, 204);
+  border: 2px solid #c2abaf;
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+}
+
 @media only screen and (max-width: 450px) {
   #nav-bar {
     top: 100px;

@@ -292,7 +292,7 @@ const questions = [
   },
 ];
 
-export default function Quiz({ loggedUser, handleLogout }) {
+export default function Quiz({ loggedUser, handleLogout, handleAvatarClick, avatarDisp }) {
   const headerIntro = "Already know what you want?";
   const headerLinkDisp = "Click Here to schedule a FREE phone consultation!";
   const headerLinkSrc = "/";
@@ -385,6 +385,8 @@ export default function Quiz({ loggedUser, handleLogout }) {
         loggedUser={loggedUser}
         handleLogout={handleLogout}
         dispSubs={false}
+        handleAvatarClick={handleAvatarClick}
+        avatarDisp={avatarDisp}
       />
       <div id="quiz-container">
         <div className="quiz">

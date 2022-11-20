@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const navigate = useNavigate();
+  const [avatarDisp, setAvatarDisp] = useState(false);
   const [user, setUser] = useState(userService.getUser()); // getUser decodes our JWT token, into a javascript object
   // this object corresponds to the jwt payload which is defined in the server signup or login function that looks like
   // this  const token = createJWT(user); // where user was the document we created from mongo
@@ -25,12 +26,17 @@ function App() {
     navigate("/");
   }
 
+  function handleAvatarClick() {
+    avatarDisp ? setAvatarDisp(false) : setAvatarDisp(true);
+  }
+
+
   if (user) {
     return (
         <Routes>
           <Route
             path="/"
-            element={<Home loggedUser={user} handleLogout={handleLogout} />}
+            element={<Home loggedUser={user} handleLogout={handleLogout} handleAvatarClick={handleAvatarClick} avatarDisp={avatarDisp} />}
           />
           <Route
             path="/login"
@@ -42,7 +48,7 @@ function App() {
           />
           <Route
             path="/quiz"
-            element={<Quiz loggedUser={user} handleLogout={handleLogout} />}
+            element={<Quiz loggedUser={user} handleLogout={handleLogout} handleAvatarClick={handleAvatarClick} avatarDisp={avatarDisp} />}
           />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>

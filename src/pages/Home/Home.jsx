@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
-import AlertBar from "../../components/AlertBar/AlertBar"
+import AlertBar from "../../components/AlertBar/AlertBar";
 import Carousel from "../../components/Carousel/Carousel";
 import Bio from "../../components/Bio/Bio";
 import LogoModal from "../../components/LogoModal/LogoModal";
@@ -10,15 +10,25 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 
-function Home({loggedUser, handleLogout}) {
+function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp }) {
   const headerIntro = "Find out your style TODAY!";
   const headerLinkDisp = "Click Here for your FREE Style Quiz!";
   const headerLinkSrc = "/quiz";
-  
+
   return (
     <div id="landing-page">
-      <AlertBar headerIntro={headerIntro} headerLinkDisp={headerLinkDisp} headerLinkSrc={headerLinkSrc} />
-      <NavBar loggedUser={loggedUser} handleLogout={handleLogout} dispSubs={true} />
+      <AlertBar
+        headerIntro={headerIntro}
+        headerLinkDisp={headerLinkDisp}
+        headerLinkSrc={headerLinkSrc}
+      />
+      <NavBar
+        loggedUser={loggedUser}
+        handleLogout={handleLogout}
+        dispSubs={true}
+        handleAvatarClick={handleAvatarClick}
+        avatarDisp={avatarDisp}
+      />
       <div id="header-buffer"></div>
       <Carousel />
       <div id="logo-details"></div>
