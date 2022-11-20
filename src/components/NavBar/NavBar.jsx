@@ -12,7 +12,6 @@ function NavBar({
   handleAvatarClick,
   avatarDisp,
 }) {
-  console.log(avatarDisp, "<--");
   return (
     <>
       <Navbar fixed="top" id="nav-bar" expand="md">
@@ -55,7 +54,9 @@ function NavBar({
         {avatarDisp ? (
           <div id="avatar-menu-container">
             <div id="avatar-menu">
-              <p>It works!</p>
+              <button className="avatar-menu-btn" onClick={handleLogout}>Profile</button>
+              <br />
+              <button className="avatar-menu-btn" onClick={handleLogout}>Logout</button>
             </div>
           </div>
         ) : null}

@@ -20,18 +20,30 @@
   background-color: rgb(253, 231, 204);
   border: 2px solid #c2abaf;
   border-radius: 10px;
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
   position: absolute;
   top: 100px;
   right: 20px;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #avatar-menu-container {
   margin-top: 100px;
   display: flex;
   justify-content: flex-end;
+}
+.avatar-menu-btn{
+  background-color: rgb(253, 231, 204);
+  border: 0px;
+  font-size: 14pt;
+}
+
+.avatar-menu-btn:hover{
+  color: #c2abaf;
 }
 
 @media only screen and (max-width: 450px) {
