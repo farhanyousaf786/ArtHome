@@ -52,14 +52,14 @@ function NavBar({
             )}
           </Nav>
         </Container>
+        {avatarDisp ? (
+          <div id="avatar-menu-container">
+            <div id="avatar-menu">
+              <p>It works!</p>
+            </div>
+          </div>
+        ) : null}
       </Navbar>
-      {avatarDisp ? (
-        <div id="avatar-menu-container">
-        <div id="avatar-menu">
-          <p>It works!</p>
-        </div>
-        </div>
-      ) : null}
     </>
   );
 }
