@@ -213,13 +213,41 @@ const questions = [
   {
     questionText: "Which of these light fixtures do you like the best?",
     answerOptions: [
-      { answerText: "Capiz shell chandelier", isLetter: "A" },
-      { answerText: "Oversize brass pendants", isLetter: "B" },
-      { answerText: "Wrought iron and crystal chandelier", isLetter: "C" },
-      { answerText: "Wrought iron wall scones", isLetter: "D" },
-      { answerText: "Moroccan style lanterns", isLetter: "E" },
-      { answerText: "Mason jar pendants", isLetter: "F" },
-      { answerText: "Antler chandelier", isLetter: "G" },
+      {
+        answerText: "Capiz shell chandelier",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/pXe8Bdh.png",
+      },
+      {
+        answerText: "Oversize brass pendants",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/Xl8DeIE.jpg",
+      },
+      {
+        answerText: "Wrought iron and crystal chandelier",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/Q92nLha.png",
+      },
+      {
+        answerText: "Wrought iron wall scones",
+        isLetter: "D",
+        imgSrc: "https://i.imgur.com/jPgMkcf.png",
+      },
+      {
+        answerText: "Moroccan style lanterns",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/FMxDH8q.png",
+      },
+      {
+        answerText: "Mason jar pendants",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/b4bcZot.png",
+      },
+      {
+        answerText: "Antler chandelier",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/aWdPHCD.png",
+      },
     ],
   },
   {
