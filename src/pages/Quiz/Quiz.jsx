@@ -221,7 +221,7 @@ const questions = [
       {
         answerText: "Oversize brass pendants",
         isLetter: "B",
-        imgSrc: "https://i.imgur.com/Xl8DeIE.jpg",
+        imgSrc: "https://i.imgur.com/eZ1M1ac.png",
       },
       {
         answerText: "Wrought iron and crystal chandelier",
