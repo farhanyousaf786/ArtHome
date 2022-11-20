@@ -253,13 +253,41 @@ const questions = [
   {
     questionText: "Which of these accessories would you buy at a yard sale?",
     answerOptions: [
-      { answerText: "A collection of sea shells", isLetter: "A" },
-      { answerText: "A vase of tulips", isLetter: "B" },
-      { answerText: "An empty bird cage", isLetter: "C" },
-      { answerText: "A collection of wine glasses", isLetter: "D" },
-      { answerText: "A collection of colored glass", isLetter: "E" },
-      { answerText: "Wire baskets", isLetter: "F" },
-      { answerText: "Cow skull to hang on the wall", isLetter: "G" },
+      {
+        answerText: "A collection of sea shells",
+        isLetter: "A",
+        imgSrc: "https://i.imgur.com/QfzYWsk.png",
+      },
+      {
+        answerText: "A vase of tulips",
+        isLetter: "B",
+        imgSrc: "https://i.imgur.com/OXCknj6.png",
+      },
+      {
+        answerText: "An empty bird cage",
+        isLetter: "C",
+        imgSrc: "https://i.imgur.com/uC1jYc4.png",
+      },
+      {
+        answerText: "A collection of wine glasses",
+        isLetter: "D",
+        imgSrc: "https://i.imgur.com/hyvJGEa.png",
+      },
+      {
+        answerText: "A collection of colored glass",
+        isLetter: "E",
+        imgSrc: "https://i.imgur.com/iBBeP8I.png",
+      },
+      {
+        answerText: "Wire baskets",
+        isLetter: "F",
+        imgSrc: "https://i.imgur.com/WVaFzrl.png",
+      },
+      {
+        answerText: "Cow skull to hang on the wall",
+        isLetter: "G",
+        imgSrc: "https://i.imgur.com/0pSVyr5.png",
+      },
     ],
   },
 ];
