@@ -4,6 +4,7 @@ import "./App.css";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import Quiz from "../Quiz/Quiz";
+import Profile from "../Profile/Profile";
 import userService from "../../utils/userService";
 import Home from "../Home/Home";
 
@@ -26,32 +27,62 @@ function App() {
     navigate("/");
   }
 
+  function handleProfile() {
+    navigate(`/${user.username}`)
+  }
+
   function handleAvatarClick() {
     avatarDisp ? setAvatarDisp(false) : setAvatarDisp(true);
   }
 
-
   if (user) {
     return (
-        <Routes>
-          <Route
-            path="/"
-            element={<Home loggedUser={user} handleLogout={handleLogout} handleAvatarClick={handleAvatarClick} avatarDisp={avatarDisp} />}
-          />
-          <Route
-            path="/login"
-            element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-          />
-          <Route
-            path="/signup"
-            element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
-          />
-          <Route
-            path="/quiz"
-            element={<Quiz loggedUser={user} handleLogout={handleLogout} handleAvatarClick={handleAvatarClick} avatarDisp={avatarDisp} />}
-          />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              loggedUser={user}
+              handleLogout={handleLogout}
+              handleAvatarClick={handleAvatarClick}
+              avatarDisp={avatarDisp}
+              handleProfile={handleProfile}
+            />
+          }
+        />
+        <Route
+          path="/login"
+          element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        />
+        <Route
+          path="/signup"
+          element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        />
+        <Route
+          path="/quiz"
+          element={
+            <Quiz
+              loggedUser={user}
+              handleLogout={handleLogout}
+              handleAvatarClick={handleAvatarClick}
+              avatarDisp={avatarDisp}
+              handleProfile={handleProfile}
+            />
+          }
+        />
+        <Route
+          path="/:username"
+          element={
+            <Profile
+              loggedUser={user}
+              handleLogout={handleLogout}
+              handleAvatarClick={handleAvatarClick}
+              avatarDisp={avatarDisp}
+              handleProfile={handleProfile}
+            />
+          }
+        />
+      </Routes>
     );
   }
 

@@ -11,6 +11,7 @@ function NavBar({
   dispSubs,
   handleAvatarClick,
   avatarDisp,
+  handleProfile
 }) {
   return (
     <>
@@ -54,7 +55,7 @@ function NavBar({
         {avatarDisp ? (
           <div id="avatar-menu-container">
             <div id="avatar-menu">
-              <button className="avatar-menu-btn" onClick={handleLogout}>Profile</button>
+              <button className="avatar-menu-btn" onClick={handleProfile}>Profile</button>
               <br />
               <button className="avatar-menu-btn" onClick={handleLogout}>Logout</button>
             </div>
