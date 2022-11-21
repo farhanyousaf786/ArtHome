@@ -16,7 +16,7 @@ function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp, handleP
   const headerLinkSrc = "/quiz";
 
   return (
-    <div id="landing-page">
+    <div className="landing-page">
       <AlertBar
         headerIntro={headerIntro}
         headerLinkDisp={headerLinkDisp}

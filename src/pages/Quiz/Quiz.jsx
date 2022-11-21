@@ -381,7 +381,7 @@ export default function Quiz({
   };
 
   return (
-    <div id="quiz-landing-page">
+    <div className="landing-page">
       <AlertBar
         headerIntro={headerIntro}
         headerLinkDisp={headerLinkDisp}

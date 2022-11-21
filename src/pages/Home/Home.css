@@ -1,6 +1,7 @@
 
-  #landing-page {
+  .landing-page {
     background-color: #f4ebdb;
+    min-height: 100vh;
   }
   
   #story {
