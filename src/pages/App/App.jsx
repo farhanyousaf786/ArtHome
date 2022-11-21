@@ -22,13 +22,15 @@ function App() {
   }
 
   function handleLogout() {
+    console.log(user.username)
     userService.logout();
     setUser(null);
     navigate("/");
   }
 
   function handleProfile() {
-    navigate(`/${user.username}`)
+    console.log(user.username);
+    navigate(`/${user.username}`);
   }
 
   function handleAvatarClick() {
@@ -44,9 +46,9 @@ function App() {
             <Home
               loggedUser={user}
               handleLogout={handleLogout}
+              handleProfile={handleProfile}
               handleAvatarClick={handleAvatarClick}
               avatarDisp={avatarDisp}
-              handleProfile={handleProfile}
             />
           }
         />
@@ -64,9 +66,9 @@ function App() {
             <Quiz
               loggedUser={user}
               handleLogout={handleLogout}
+              handleProfile={handleProfile}
               handleAvatarClick={handleAvatarClick}
               avatarDisp={avatarDisp}
-              handleProfile={handleProfile}
             />
           }
         />
@@ -76,9 +78,9 @@ function App() {
             <Profile
               loggedUser={user}
               handleLogout={handleLogout}
+              handleProfile={handleProfile}
               handleAvatarClick={handleAvatarClick}
               avatarDisp={avatarDisp}
-              handleProfile={handleProfile}
             />
           }
         />

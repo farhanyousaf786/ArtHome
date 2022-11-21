@@ -14,10 +14,11 @@ export default function Profile({
     <>
       <AlertBar />
       <NavBar
-        handleAvatarClick={handleAvatarClick}
+        loggedUser={loggedUser}
         handleLogout={handleLogout}
-        avatarDisp={avatarDisp}
         dispSubs={false}
+        handleAvatarClick={handleAvatarClick}
+        avatarDisp={avatarDisp}
         handleProfile={handleProfile}
       />
       <h1>Hello {loggedUser.username}!</h1>

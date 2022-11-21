@@ -10,7 +10,7 @@ import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 
-function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp }) {
+function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp, handleProfile }) {
   const headerIntro = "Find out your style TODAY!";
   const headerLinkDisp = "Click Here for your FREE Style Quiz!";
   const headerLinkSrc = "/quiz";
@@ -25,6 +25,7 @@ function Home({ loggedUser, handleLogout, handleAvatarClick, avatarDisp }) {
       <NavBar
         loggedUser={loggedUser}
         handleLogout={handleLogout}
+        handleProfile={handleProfile}
         dispSubs={true}
         handleAvatarClick={handleAvatarClick}
         avatarDisp={avatarDisp}
