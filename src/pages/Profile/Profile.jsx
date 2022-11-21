@@ -21,7 +21,7 @@ export default function Profile({
         avatarDisp={avatarDisp}
         handleProfile={handleProfile}
       />
-      <div className="landing-page" id="test-buffer">
+      <div className="landing-page" id="profile-buffer">
       <h1>Hello {loggedUser.username}!</h1>
       </div>
     </>

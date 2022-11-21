@@ -22,14 +22,13 @@ function App() {
   }
 
   function handleLogout() {
-    console.log(user.username)
     userService.logout();
     setUser(null);
     navigate("/");
   }
 
   function handleProfile() {
-    console.log(user.username);
+    setAvatarDisp(false);
     navigate(`/${user.username}`);
   }
 
