@@ -61,9 +61,10 @@ function NavBar({
             
               <motion.div
                 id="avatar-menu"
-                animate={{ y: -25 }}
+                initial={{ y: -40, opacity: 0}}
+                animate={{ y: -25, opacity: 1 }}
                 transition={{ type: "tween", duration: 0.3 }}
-                exit={{ y: 0, opacity: 0 }}
+                exit={{ y: -40, opacity: 0 }}
               >
                 <button className="avatar-menu-btn" onClick={handleProfile}>
                   Profile
