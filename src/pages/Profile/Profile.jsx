@@ -28,17 +28,30 @@ export default function Profile({
         
         <motion.div
             animate={{ x: 150, opacity: 1 }}
-            transition={{  type:"tween", delay: 1 }}
+            transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
         >
           <h1>Hello {loggedUser.username}!</h1>
+          </motion.div>
+          <motion.div
+            animate={{ x: 150, opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            initial={{ opacity: 0 }}
+        >
           <h3>Welcome to your profile page.</h3>
+          </motion.div>
+          <motion.div
+            animate={{ x: 150, opacity: 1 }}
+            transition={{ delay: 2.5, duration: 1 }}
+            initial={{ opacity: 0 }}
+        >
           {loggedUser.quizGrade !== "null" ? (
-            <h3>Your preferred style is {loggedUser.quizGrade}</h3>
+            <h3>{loggedUser.quizGrade}</h3>
           ) : (
             <h3>You haven't taken the style quiz yet.</h3>
           )}
-        </motion.div>
+          </motion.div>
+        
 
         <br />
         <div id="profile-widgets">
