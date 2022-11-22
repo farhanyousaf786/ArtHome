@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 import AlertBar from "../../components/AlertBar/AlertBar";
 import { Image, Card, Row } from "react-bootstrap";
 //import Loading from "../../components/Loading/Loading";
@@ -438,6 +439,7 @@ export default function Quiz({
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

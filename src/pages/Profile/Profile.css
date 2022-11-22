@@ -1,4 +1,18 @@
 #profile-buffer {
-    margin-top: 200px;
-    text-align: center;
+    padding-top: 200px;
+    text-align: left;
+}
+
+
+#profile-widgets {
+    display: flex;
+    justify-content: space-around;
+}
+
+#profile-upload-photo, #profile-view-photo {
+    height: 200px;
+    width: 400px;
+    background-color: rgb(253, 231, 204);
+    border: 2px solid #c2abaf;
+    border-radius: 5px;
 }
