@@ -1,8 +1,11 @@
+import * as React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import { CgProfile } from "react-icons/cg";
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
+
 import "./NavBar.css";
 
 function NavBar({
@@ -11,7 +14,7 @@ function NavBar({
   dispSubs,
   handleAvatarClick,
   avatarDisp,
-  handleProfile
+  handleProfile,
 }) {
   return (
     <>
@@ -52,15 +55,27 @@ function NavBar({
             )}
           </Nav>
         </Container>
+        <AnimatePresence>
         {avatarDisp ? (
           <div id="avatar-menu-container">
-            <div id="avatar-menu">
-              <button className="avatar-menu-btn" onClick={handleProfile}>Profile</button>
-              <br />
-              <button className="avatar-menu-btn" onClick={handleLogout}>Logout</button>
-            </div>
+            
+              <motion.div
+                id="avatar-menu"
+                animate={{ y: -25 }}
+                transition={{ type: "tween", duration: 0.3 }}
+                exit={{ y: 0, opacity: 0 }}
+              >
+                <button className="avatar-menu-btn" onClick={handleProfile}>
+                  Profile
+                </button>
+                <br />
+                <button className="avatar-menu-btn" onClick={handleLogout}>
+                  Logout
+                </button>
+              </motion.div>
           </div>
         ) : null}
+        </AnimatePresence>
       </Navbar>
     </>
   );
