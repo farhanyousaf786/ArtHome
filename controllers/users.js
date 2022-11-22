@@ -12,11 +12,20 @@ module.exports = {
   signup,
   login,
   profile,
+  //update,
 };
+
+//Update Player
+// function update(req, res) {
+//   User.findByIdAndUpdate(req.params.id, req.body, function (err, userDoc) {
+//     userDoc.save(function (err) {
+//       res.redirect("/");
+//     });
+//   });
+// }
 
 //-------------Profile-------------
 async function profile(req, res) {
-  console.log(req.body, "<== req.body");
   try {
     const user = await User.findOne({ username: req.params.username });
     if (!user) return res.status(400).json({ error: "User not found" });
