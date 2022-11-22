@@ -6,7 +6,6 @@ import { Image, Card, Row } from "react-bootstrap";
 
 import "./Quiz.css";
 
-let userStyle = "";
 const userAnswers = [];
 const questions = [
   {
@@ -355,20 +354,20 @@ export default function Quiz({
     answersTallied.sort(compare);
 
     if (answersTallied[0].type === "A") {
-      userStyle = "Coastal Chic will make you feel right at home.";
+      loggedUser.quizGrade = "Coastal Chic will make you feel right at home.";
     } else if (answersTallied[0].type === "B") {
-      userStyle = "Scandinavian may just be the perfect style for you.";
+      loggedUser.quizGrade = "Scandinavian may just be the perfect style for you.";
     } else if (answersTallied[0].type === "C") {
-      userStyle = "French Country is a great choice.";
+      loggedUser.quizGrade = "French Country is a great choice.";
     } else if (answersTallied[0].type === "D") {
-      userStyle =
+      loggedUser.quizGrade =
         "Tuscan furnishings should definitely be included in your home.";
     } else if (answersTallied[0].type === "E") {
-      userStyle = "Bohemian is your preferred style.";
+      loggedUser.quizGrade = "Bohemian is your preferred style.";
     } else if (answersTallied[0].type === "F") {
-      userStyle = "Farmhouse is likely a good fit.";
+      loggedUser.quizGrade = "Farmhouse is likely a good fit.";
     } else {
-      userStyle = "Western will work well in your home.";
+      loggedUser.quizGrade = "Western will work well in your home.";
     }
 
     setShowScore(true);
@@ -398,7 +397,7 @@ export default function Quiz({
       <div id="quiz-container">
         <div className="quiz">
           {showScore ? (
-            <div className="score-section">{userStyle}</div>
+            <div className="score-section">{loggedUser.quizGrade}</div>
           ) : (
             <>
               <div className="question-section">

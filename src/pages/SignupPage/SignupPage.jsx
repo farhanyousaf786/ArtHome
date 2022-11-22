@@ -22,7 +22,7 @@ export default function SignUpPage(props) {
     email: "",
     password: "",
     passwordConf: "",
-    bio: "",
+    quizGrade: null,
   });
 
   const [selectedFile, setSelectedFile] = useState("");

@@ -36,6 +36,8 @@ function App() {
     avatarDisp ? setAvatarDisp(false) : setAvatarDisp(true);
   }
 
+  console.log(user)
+
   if (user) {
     return (
       <Routes>

@@ -22,7 +22,15 @@ export default function Profile({
         handleProfile={handleProfile}
       />
       <div className="landing-page" id="profile-buffer">
-      <h1>Hello {loggedUser.username}!</h1>
+        <h1>Hello {loggedUser.username}!</h1>
+        <h3>Welcome to your profile page.</h3>
+
+        {loggedUser.quizGrade !== "null" ? (
+          <h3>Your preferred style is {loggedUser.quizGrade}</h3>
+        ) : (
+          <h3>You haven't taken the style quiz yet.</h3>
+        )}
+        
       </div>
     </>
   );

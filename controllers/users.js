@@ -14,6 +14,7 @@ module.exports = {
   profile,
 };
 
+//-------------Profile-------------
 async function profile(req, res) {
   console.log(req.body, "<== req.body");
   try {
@@ -33,6 +34,7 @@ async function profile(req, res) {
   }
 }
 
+//-------------Signup-------------
 async function signup(req, res) {
   console.log(req.body, " req.body in signup", req.file);
 
@@ -79,6 +81,8 @@ async function signup(req, res) {
   });
 }
 
+
+//-------------Login-------------
 async function login(req, res) {
   try {
     const user = await User.findOne({ email: req.body.email });
